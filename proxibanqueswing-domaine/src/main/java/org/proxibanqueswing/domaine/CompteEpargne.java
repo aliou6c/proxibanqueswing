@@ -1,6 +1,7 @@
 package org.proxibanqueswing.domaine;
 
 import java.util.Date;
+import java.util.List;
 
 public class CompteEpargne extends Compte {
 	private float tauxRemuneration;
@@ -12,16 +13,26 @@ public class CompteEpargne extends Compte {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
+	
+	
 
 	/**
 	 * @param numeroCompte
 	 * @param solde
 	 * @param dateOuverture
+	 * @param logTransactions
+	 * @param carte
+	 * @param client
 	 */
-	public CompteEpargne(int numeroCompte, Double solde, Date dateOuverture, float tauxRemuneration) {
-		super(numeroCompte, solde, dateOuverture);
+	public CompteEpargne(int numeroCompte, Double solde, Date dateOuverture, List<LogTransactions> logTransactions,
+			Carte carte, Client client, float tauxRemuneration) {
+		super(numeroCompte, solde, dateOuverture, logTransactions, carte, client);
 		this.tauxRemuneration = tauxRemuneration;
 	}
+
+
+
 
 	public float getTauxRemuneration() {
 		return tauxRemuneration;

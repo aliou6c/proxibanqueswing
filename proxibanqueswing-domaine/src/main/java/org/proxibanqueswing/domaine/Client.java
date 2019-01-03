@@ -1,5 +1,7 @@
 package org.proxibanqueswing.domaine;
 
+import java.util.Arrays;
+
 public class Client {
 	private int idClient;
 	private String nomClient;
@@ -10,9 +12,11 @@ public class Client {
 	private String ville;
 	private String telClient;
 	private String professionClient;
+	private Conseiller conseiller;
+	private Compte[]compte = new Compte [2];
 	
 	public Client() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	/**
@@ -25,9 +29,12 @@ public class Client {
 	 * @param ville
 	 * @param telClient
 	 * @param professionClient
+	 * @param conseiller;
+	 * @param compte
 	 */
 	public Client(int idClient, String nomClient, String prenomClient, String emailClient, String adresseClient,
-			int codePostalClient, String ville, String telClient, String professionClient) {
+			int codePostalClient, String ville, String telClient, String professionClient,
+			Conseiller conseiller, Compte[]compte) {
 		super();
 		this.idClient = idClient;
 		this.nomClient = nomClient;
@@ -38,6 +45,8 @@ public class Client {
 		this.ville = ville;
 		this.telClient = telClient;
 		this.professionClient = professionClient;
+		this.conseiller = conseiller;
+		this.compte = compte;
 	}
 
 	public int getIdClient() {
@@ -111,14 +120,35 @@ public class Client {
 	public void setProfessionClient(String professionClient) {
 		this.professionClient = professionClient;
 	}
+	
+	
+
+	public Conseiller getConseiller() {
+		return conseiller;
+	}
+
+	public void setConseiller(Conseiller conseiller) {
+		this.conseiller = conseiller;
+	}
+
+	public Compte[] getCompte() {
+		return compte;
+	}
+
+	public void setCompte(Compte[] compte) {
+		this.compte = compte;
+	}
 
 	@Override
 	public String toString() {
 		return "Client [idClient=" + idClient + ", nomClient=" + nomClient + ", prenomClient=" + prenomClient
 				+ ", emailClient=" + emailClient + ", adresseClient=" + adresseClient + ", codePostalClient="
 				+ codePostalClient + ", ville=" + ville + ", telClient=" + telClient + ", professionClient="
-				+ professionClient + "]";
+				+ professionClient + ", conseiller=" + conseiller + ", compte=" + Arrays.toString(compte) + "]";
 	}
+	
+	
+
 	
 	
 

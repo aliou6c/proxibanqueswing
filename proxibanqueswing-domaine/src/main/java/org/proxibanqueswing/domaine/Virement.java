@@ -5,16 +5,27 @@ import java.util.Date;
 public class Virement extends Transaction {
 	private int numeroCompteDebiteur;
 	private int numeroCompteCrediteur;
+	
+	public Virement() {
+		
+	}	
+	
 	/**
 	 * @param numeroTransaction
 	 * @param dateTransaction
 	 * @param montantTransaction
+	 * @param logTransactions
+	 * @param conseiller
+	 * @param numeroCompteDebiteur
+	 * @param numeroCompteCrediteur
 	 */
-	public Virement(int numeroTransaction, Date dateTransaction, Double montantTransaction, int numeroCompteDebiteur, int numeroCompteCrediteur) {
-		super(numeroTransaction, dateTransaction, montantTransaction);
+	public Virement(int numeroTransaction, Date dateTransaction, Double montantTransaction,
+			LogTransactions logTransactions, Conseiller conseiller,int numeroCompteDebiteur,int numeroCompteCrediteur ) {
+		super(numeroTransaction, dateTransaction, montantTransaction, logTransactions, conseiller);
 		this.numeroCompteDebiteur = numeroCompteDebiteur;
 		this.numeroCompteCrediteur = numeroCompteCrediteur;
 	}
+
 	public int getNumeroCompteDebiteur() {
 		return numeroCompteDebiteur;
 	}
