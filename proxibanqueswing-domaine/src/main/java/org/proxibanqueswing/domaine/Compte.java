@@ -7,7 +7,7 @@ public class Compte {
 	private int numeroCompte;
 	private Double solde;
 	private Date dateOuverture;
-	private List<LogTransactions>logTransactions;
+	private List<Transaction>listTransactions;
 	private Carte carte;
 	private Client client;
 	
@@ -23,12 +23,12 @@ public class Compte {
 	 * @param carte
 	 * @param client
 	 */
-	public Compte(int numeroCompte, Double solde, Date dateOuverture, List<LogTransactions>logTransactions, Carte carte,Client client) {
+	public Compte(int numeroCompte, Double solde, Date dateOuverture, List<Transaction>listTransactions, Carte carte,Client client) {
 		super();
 		this.numeroCompte = numeroCompte;
 		this.solde = solde;
 		this.dateOuverture = dateOuverture;
-		this.logTransactions = logTransactions;
+		this.listTransactions = listTransactions;
 		this.carte = carte;
 		this.client = client;
 	}
@@ -57,12 +57,12 @@ public class Compte {
 		this.dateOuverture = dateOuverture;
 	}
 
-	public List<LogTransactions> getLogTransactions() {
-		return logTransactions;
+	public List<Transaction> getListTransactions() {
+		return listTransactions;
 	}
 
-	public void setLogTransactions(List<LogTransactions> logTransactions) {
-		this.logTransactions = logTransactions;
+	public void setLogTransactions(List<Transaction> listTransactions) {
+		this.listTransactions = listTransactions;
 	}
 
 	public Carte getCarte() {
@@ -84,9 +84,9 @@ public class Compte {
 	@Override
 	public String toString() {
 		return "Compte [numeroCompte=" + numeroCompte + ", solde=" + solde + ", dateOuverture=" + dateOuverture
-				+ ", logTransactions=" + logTransactions + ", carte=" + carte + ", client=" + client + "]";
+				+ ", listTransactions=" + listTransactions + ", carte=" + carte + ", client=" + client + "]";
 	}
-	
+
 	
 	
 	

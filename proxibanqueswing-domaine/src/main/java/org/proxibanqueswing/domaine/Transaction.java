@@ -7,7 +7,7 @@ public class Transaction {
 	private Date dateTransaction;
 	private Double montantTransaction;
 	private Conseiller conseiller;
-	private LogTransactions logTransactions;
+	private Compte compte;
 	
 	public Transaction() {
 		// TODO Auto-generated constructor stub
@@ -18,15 +18,15 @@ public class Transaction {
 	 * @param dateTransaction
 	 * @param montantTransaction
 	 * @param conseiller
-	 * @param logTransactions
+	 * @param transactions
 	 */
-	public Transaction(int numeroTransaction, Date dateTransaction, Double montantTransaction,LogTransactions logTransactions, Conseiller conseiller) {
+	public Transaction(int numeroTransaction, Date dateTransaction, Double montantTransaction,Compte compte, Conseiller conseiller) {
 		super();
 		this.numeroTransaction = numeroTransaction;
 		this.dateTransaction = dateTransaction;
 		this.montantTransaction = montantTransaction;
 		this.conseiller = conseiller;
-		this.logTransactions = logTransactions;
+		this.compte = compte;
 		
 	}
 
@@ -64,20 +64,23 @@ public class Transaction {
 		this.conseiller = conseiller;
 	}
 
-	public LogTransactions getLogTransactions() {
-		return logTransactions;
+	public Compte getCompte() {
+		return compte;
 	}
 
-	public void setLogTransactions(LogTransactions logTransactions) {
-		this.logTransactions = logTransactions;
+	public void setCompte(Compte compte) {
+		this.compte = compte;
 	}
 
 	@Override
 	public String toString() {
 		return "Transaction [numeroTransaction=" + numeroTransaction + ", dateTransaction=" + dateTransaction
-				+ ", montantTransaction=" + montantTransaction + ", conseiller=" + conseiller + ", logTransactions="
-				+ logTransactions + "]";
+				+ ", montantTransaction=" + montantTransaction + ", conseiller=" + conseiller + ", compte=" + compte
+				+ "]";
 	}
+
+	
+
 	
 	
 	

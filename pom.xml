@@ -27,5 +27,6 @@
     <module>proxibanqueswing-dao</module>
     <module>proxibanqueswing-service</module>
     <module>proxibanqueswing-presentation</module>
+    <module>proxibanqueswing-utils</module>
   </modules>
 </project>

@@ -10,21 +10,23 @@ public class Virement extends Transaction {
 		
 	}	
 	
+	
+
 	/**
 	 * @param numeroTransaction
 	 * @param dateTransaction
 	 * @param montantTransaction
-	 * @param logTransactions
+	 * @param compte
 	 * @param conseiller
-	 * @param numeroCompteDebiteur
-	 * @param numeroCompteCrediteur
 	 */
-	public Virement(int numeroTransaction, Date dateTransaction, Double montantTransaction,
-			LogTransactions logTransactions, Conseiller conseiller,int numeroCompteDebiteur,int numeroCompteCrediteur ) {
-		super(numeroTransaction, dateTransaction, montantTransaction, logTransactions, conseiller);
-		this.numeroCompteDebiteur = numeroCompteDebiteur;
+	public Virement(int numeroTransaction, Date dateTransaction, Double montantTransaction, Compte compte,
+			Conseiller conseiller,int numeroCompteDebiteur,  int numeroCompteCrediteur) {
+		super(numeroTransaction, dateTransaction, montantTransaction, compte, conseiller);
 		this.numeroCompteCrediteur = numeroCompteCrediteur;
+		this.numeroCompteDebiteur = numeroCompteDebiteur;
 	}
+
+
 
 	public int getNumeroCompteDebiteur() {
 		return numeroCompteDebiteur;

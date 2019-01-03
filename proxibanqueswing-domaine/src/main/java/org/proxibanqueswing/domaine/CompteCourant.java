@@ -6,8 +6,6 @@ import java.util.List;
 public class CompteCourant extends Compte {
 	private Double decouverte;
 
-	
-		
 		
 	/**
 	 * 
@@ -21,17 +19,15 @@ public class CompteCourant extends Compte {
 	 * @param numeroCompte
 	 * @param solde
 	 * @param dateOuverture
-	 * @param logTransactions
+	 * @param listTransactions
 	 * @param carte
 	 * @param client
 	 */
-	public CompteCourant(int numeroCompte, Double solde, Date dateOuverture, List<LogTransactions> logTransactions,
+	public CompteCourant(int numeroCompte, Double solde, Date dateOuverture, List<Transaction> listTransactions,
 			Carte carte, Client client, Double decouverte) {
-		super(numeroCompte, solde, dateOuverture, logTransactions, carte, client);
+		super(numeroCompte, solde, dateOuverture, listTransactions, carte, client);
 		this.decouverte = decouverte;
 	}
-
-
 
 	public Double getDecouverte() {
 		return decouverte;

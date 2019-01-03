@@ -1,12 +1,13 @@
 package org.proxibanqueswing.domaine;
 
 import java.util.Date;
+import java.util.List;
 
 public class LogTransactions {
 	private int numeroLog;
 	private Date dateLog;
-	private Compte compte;
-	private Transaction transaction;
+	
+	private List<Transaction> listTransaction;
 
 	public LogTransactions() {
 		// TODO Auto-generated constructor stub
@@ -18,12 +19,11 @@ public class LogTransactions {
 	 * @param compte
 	 * @param transaction
 	 */
-	public LogTransactions(int numeroLog, Date dateLog, Compte compte, Transaction transaction) {
+	public LogTransactions(int numeroLog, Date dateLog) {
 		super();
 		this.numeroLog = numeroLog;
-		this.dateLog = dateLog;
-		this.compte = compte;
-		this.transaction = transaction;
+		this.dateLog = dateLog;		
+		List<Transaction> listTransaction = null;
 	}
 
 	public int getNumeroLog() {
@@ -41,28 +41,22 @@ public class LogTransactions {
 	public void setDateLog(Date dateLog) {
 		this.dateLog = dateLog;
 	}
-
-	public Compte getCompte() {
-		return compte;
+	
+	public List<Transaction> getListTransaction() {
+		return listTransaction;
 	}
 
-	public void setCompte(Compte compte) {
-		this.compte = compte;
-	}
-
-	public Transaction getTransaction() {
-		return transaction;
-	}
-
-	public void setTransaction(Transaction transaction) {
-		this.transaction = transaction;
+	public void setListTransaction(List<Transaction> listTransaction) {
+		this.listTransaction = listTransaction;
 	}
 
 	@Override
 	public String toString() {
-		return "LogTransactions [numeroLog=" + numeroLog + ", dateLog=" + dateLog + ", compte=" + compte
-				+ ", transaction=" + transaction + "]";
+		return "LogTransactions [numeroLog=" + numeroLog + ", dateLog=" + dateLog + ", listTransaction="
+				+ listTransaction + "]";
 	}
+
+	
 	
 	
 

@@ -13,26 +13,20 @@ public class CompteEpargne extends Compte {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
-	
-	
 
 	/**
 	 * @param numeroCompte
 	 * @param solde
 	 * @param dateOuverture
-	 * @param logTransactions
+	 * @param listTransactions
 	 * @param carte
 	 * @param client
 	 */
-	public CompteEpargne(int numeroCompte, Double solde, Date dateOuverture, List<LogTransactions> logTransactions,
+	public CompteEpargne(int numeroCompte, Double solde, Date dateOuverture, List<Transaction> listTransactions,
 			Carte carte, Client client, float tauxRemuneration) {
-		super(numeroCompte, solde, dateOuverture, logTransactions, carte, client);
-		this.tauxRemuneration = tauxRemuneration;
+		super(numeroCompte, solde, dateOuverture, listTransactions, carte, client);
+		this.tauxRemuneration =  tauxRemuneration;
 	}
-
-
-
 
 	public float getTauxRemuneration() {
 		return tauxRemuneration;

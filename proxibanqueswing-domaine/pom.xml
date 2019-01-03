@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>sn.objis</groupId>
 	<artifactId>proxibanqueswing-domaine</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>${project.parent.version}</version>
 	<name>proxibanqueswing-domaine</name>
 	<url>http://maven.apache.org</url>
 	<properties>
@@ -23,10 +23,6 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>sn.objis</groupId>
-			<artifactId>proxibanqueswing</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
+		
 	</dependencies>
 </project>
